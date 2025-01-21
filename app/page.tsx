@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function Home() {
   const [images, setImages] = useState({
@@ -58,7 +59,13 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
           <h3 className="text-xl font-bold mb-4">Dribbling</h3>
           {images.dribbling ? (
-            <img src={images.dribbling} alt="Amos Dribbling" className="mx-auto rounded-md" />
+            <Image
+              src={images.dribbling}
+              alt="Dribbling"
+              width={400}
+              height={400}
+              className="w-full rounded-lg shadow-lg"
+            />
           ) : (
             <div className="space-y-4">
               <textarea
@@ -92,7 +99,13 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
           <h3 className="text-xl font-bold mb-4">Shooting and Scoring</h3>
           {images.celebrating ? (
-            <img src={images.celebrating} alt="Amos Scoring" className="mx-auto rounded-md" />
+            <Image
+              src={images.celebrating}
+              alt="Celebrating"
+              width={400}
+              height={400}
+              className="w-full rounded-lg shadow-lg"
+            />
           ) : (
             <div className="space-y-4">
               <textarea
@@ -119,14 +132,20 @@ export default function Home() {
             </div>
           )}
           <p className="mt-4 text-gray-700 font-medium">
-            "Amos snapflux scored a Goal! What a nice shot!".
+            &quot;Amos snapflux scored a Goal! What a nice shot!&quot;
           </p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
           <h3 className="text-xl font-bold mb-4">Celebrating</h3>
           {images.resting ? (
-            <img src={images.resting} alt="Amos Celebrating" className="mx-auto rounded-md" />
+            <Image
+              src={images.resting}
+              alt="Resting"
+              width={400}
+              height={400}
+              className="w-full rounded-lg shadow-lg"
+            />
           ) : (
             <div className="space-y-4">
               <textarea
@@ -153,7 +172,7 @@ export default function Home() {
             </div>
           )}
           <p className="mt-4 text-gray-700 font-medium">
-            "Amos snapflux celebrates with the ball in his hands."
+            &quot;Amos snapflux celebrates with the ball in his hands.&quot;
           </p>
         </div>
       </div>
