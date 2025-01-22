@@ -48,8 +48,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-10">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Mini-project 2: <span className="text-gray-700">Front End</span>
+      <h1 className="text-3xl font-bold text-center mb-8 text-blue-900">
+        Mini-project 2: <span className="text-blue-900">Front End</span>
       </h1>
 
       <div className="bg-orange-400 text-white p-5 text-center rounded-lg mb-10">
@@ -57,7 +57,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
-          <h3 className="text-xl font-bold mb-4">Dribbling</h3>
+          <h3 className="text-xl font-bold mb-4 text-blue-900">Dribbling</h3>
           {images.dribbling ? (
             <Image
               src={images.dribbling}
@@ -69,7 +69,7 @@ export default function Home() {
           ) : (
             <div className="space-y-4">
               <textarea
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md text-blue-900"
                 placeholder="Describe how Amos is dribbling..."
                 value={prompts.dribbling}
                 onChange={(e) => setPrompts(prev => ({ ...prev, dribbling: e.target.value }))}
@@ -91,13 +91,13 @@ export default function Home() {
               </button>
             </div>
           )}
-          <p className="mt-4 text-gray-700 font-medium">
-            Meet Amos snapflux, the rising soccer star! His mission today: dribble past defenders and score the winning goal!
+          <p className="mt-4 text-blue-900 font-medium">
+            Meet Amos, the rising soccer star! His mission today: dribble past defenders and score the winning goal!
           </p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
-          <h3 className="text-xl font-bold mb-4">Shooting and Scoring</h3>
+          <h3 className="text-xl font-bold mb-4 text-blue-900">Shooting and Scoring</h3>
           {images.celebrating ? (
             <Image
               src={images.celebrating}
@@ -109,7 +109,7 @@ export default function Home() {
           ) : (
             <div className="space-y-4">
               <textarea
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md text-blue-900"
                 placeholder="Describe Amos scoring the goal..."
                 value={prompts.celebrating}
                 onChange={(e) => setPrompts(prev => ({ ...prev, celebrating: e.target.value }))}
@@ -131,13 +131,13 @@ export default function Home() {
               </button>
             </div>
           )}
-          <p className="mt-4 text-gray-700 font-medium">
-            &quot;Amos snapflux scored a Goal! What a nice shot!&quot;
+          <p className="mt-4 text-blue-900 font-medium">
+            &quot;Amos scored a Goal! What a nice shot!&quot;
           </p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-5 text-center">
-          <h3 className="text-xl font-bold mb-4">Celebrating</h3>
+          <h3 className="text-xl font-bold mb-4 text-blue-900">Celebrating</h3>
           {images.resting ? (
             <Image
               src={images.resting}
@@ -149,7 +149,7 @@ export default function Home() {
           ) : (
             <div className="space-y-4">
               <textarea
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md text-blue-900"
                 placeholder="Describe how Amos is celebrating..."
                 value={prompts.resting}
                 onChange={(e) => setPrompts(prev => ({ ...prev, resting: e.target.value }))}
@@ -171,8 +171,8 @@ export default function Home() {
               </button>
             </div>
           )}
-          <p className="mt-4 text-gray-700 font-medium">
-            &quot;Amos snapflux celebrates with the ball in his hands.&quot;
+          <p className="mt-4 text-blue-900 font-medium">
+            &quot;Amos celebrates with the ball in his hands.&quot;
           </p>
         </div>
       </div>

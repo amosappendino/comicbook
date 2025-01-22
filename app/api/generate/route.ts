@@ -23,6 +23,26 @@ export async function POST(req: Request) {
 
     console.log("Generated image URL:", imageUrl);
     
+    // Save the image to backend
+    try {
+      const backendResponse = await fetch('https://sundai-backend-39193345146.us-east4.run.app/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: prompt,
+          image_url: imageUrl
+        })
+      });
+
+      if (!backendResponse.ok) {
+        console.error('Failed to save image to backend');
+      }
+    } catch (error) {
+      console.error('Error saving to backend:', error);
+    }
+    
     // Fetch the image
     const response = await fetch(imageUrl);
     const imageBlob = await response.blob();
